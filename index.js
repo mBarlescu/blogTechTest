@@ -26,7 +26,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 
 
-app.get('/posts', (q, res) => {
+app.get('/', (req, res) => {
+  // res.render('index')
+  res.redirect('/posts')
+});
+
+app.get('/posts', (req, res) => {
   client.connect()
 
 client.query('SELECT * FROM blog ORDER BY id DESC', (err, result) => {

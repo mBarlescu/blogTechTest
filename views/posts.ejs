@@ -5,12 +5,13 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
+  <% include ./_header %>
   <h1>this is the posts page</h1>
   <div>
   <% for(var i=0; i < blog.length; i++) { %>
-    <div><%= blog[i].title %></div>
-    <div><%= blog[i].description %></div>
-    <div><%= blog[i].email %></div>
+    <div> <span style="font-weight: 600">Title: </span> <%= blog[i].title %></div>
+    <div> <span style="font-weight: 600"> Description: </span> <%= blog[i].description %></div>
+    <div> <span style="font-weight: 600">Email: </span> <%= blog[i].email %> </div>
     <br />
   <% } %>
   </div>

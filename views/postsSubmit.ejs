@@ -5,18 +5,19 @@
 
 </head>
 <body>
+  <% include ./_header %>
   <h1>This is the submit page</h1>
   <form method='POST' action='/posts/submit' class='form' name='frm'>
     <div>
       <label>Title:</label>
       <br />
-      <input class='title' name='title' placeholder='title...' type='text'></input>
+      <input style="width: 500px" class='title' name='title' placeholder='title...' type='text'></input>
     </div>
     <br/>
     <div>
       <label>Description:</label>
       <br />
-      <textarea class='description' name='description' placeholder='description...' type='text'></textarea>
+      <textarea style="height: 200px; width: 500px" class='description' name='description' placeholder='description...' type='text'></textarea>
     </div>
     <br/>
     <div>
