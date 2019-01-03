@@ -35,28 +35,9 @@ app.get('/posts', (req, res) => {
   client.connect()
 
 client.query('SELECT * FROM blog ORDER BY id DESC', (err, result) => {
-  console.log(err ? err.stack : result.rows[0].message)
-  // console.log(result.rows);
-  // let blog = result.rows[1]
-
-  // const blogs = result.rows;
-  // blogs.forEach(function(blog) {
-  //   console.log('each blog', blog)
-  // })
-  // console.log('here2', result.rows)
-  // console.log(result.rows[0].id);
   const template ={
     blog: result.rows
-    // blogID: result.rows[0].id,
-    // blogTitle: result.rows[0].title,
-    // blogDescription: result.rows[0].description,
-    // blogEmail: result.rows[0].email
   }
-    // console.log(blog)
-  console.log(template);
-  console.log('here', template.blog[0])
-  // console.log(result.rows[3]);
-
   res.render('posts', template);
   // client.end()
 })
