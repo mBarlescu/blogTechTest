@@ -13,19 +13,6 @@ Type 'node index.js' into your CLI to start the server.
 
 Visit 'http://localhost:3000/posts/submit' to create a post. And to view all posts, visit 'http://localhost:3000/posts'
 
-The app has a huge bug, where if the /posts page is refreshed the server shuts down. This problem was resolved by removing 'client.end()', from the queries.
-I will continue working on the app.
+The app had a huge bug, where if the /posts page is refreshed the server shuts down. This problem was resolved by removing 'client.end()', from the queries.
 
 
-class FormView {
-  constructor(){
-    this.form = document.querySelector("form");
-    this.form.onSubmit = this.onSubmit;
-  }
-  onSubmit(e) {
-    e.preventDefault();
-    console.log('is it even working?', e)
-  }
-}
-
-new FormView();
