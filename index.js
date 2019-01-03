@@ -17,13 +17,16 @@ const client = new pg.Client({
 // const client = new pg.Client(connectionString);
 
 app.set("view engine", "ejs");
+app.use("/public", express.static(__dirname + "/public"));
+
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 
 
-app.get('/posts', (req, res) => {
+app.get('/posts', (q, res) => {
   client.connect()
 
 client.query('SELECT * FROM blog', (err, result) => {

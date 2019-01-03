@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>posts submit</title>
+
 </head>
 <body>
   <h1>This is the submit page</h1>
-  <form method='POST' action='/posts/submit'>
+  <form method='POST' action='/posts/submit' class='form' name='frm'>
     <div>
       <label>Title:</label>
       <br />
-      <input name='title' placeholder='title...' type='text'></input>
+      <input class='title' name='title' placeholder='title...' type='text'></input>
     </div>
     <br/>
     <div>
       <label>Description:</label>
       <br />
-      <textarea name='description' placeholder='description...' type='text'></textarea>
+      <textarea class='description' name='description' placeholder='description...' type='text'></textarea>
     </div>
     <br/>
     <div>
@@ -26,8 +27,9 @@
     <br/>
     </div>
     <div>
-      <button type='submit'>Submit</button>
+      <button onClick="return IsEmpty();" type='submit'>Submit</button>
     </div>
   </form>
+  <script type="text/javascript" src="../public/app.js" async=""></script>
 </body>
 </html>
