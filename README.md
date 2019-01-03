@@ -2,6 +2,8 @@
 
 Express app with postgresql database, implementing ejs files.
 
+Be sure to, 'npm install' in the CLI.
+
 To get the database setup make sure postgresql is implemented.
 Then, in the CLI of a new repo, type in: 'createdb blog'
 You can now type in your CLI: 'psql -f widgets.sql'
