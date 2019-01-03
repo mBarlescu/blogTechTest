@@ -50,7 +50,7 @@ client.query('SELECT * FROM blog', (err, result) => {
   // console.log(result.rows[3]);
 
   res.render('posts', template);
-  client.end()
+  // client.end()
 })
 
 })
@@ -68,7 +68,7 @@ app.post('/posts/submit', (req,res) => {
     [req.body.title, req.body.description, req.body.email]);
 
     res.redirect('/posts');
-    client.end();
+    // client.end();
   });
 
 app.listen(3000, () => {
