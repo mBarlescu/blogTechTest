@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.get('/posts', (q, res) => {
   client.connect()
 
-client.query('SELECT * FROM blog', (err, result) => {
+client.query('SELECT * FROM blog ORDER BY id DESC', (err, result) => {
   console.log(err ? err.stack : result.rows[0].message)
   // console.log(result.rows);
   // let blog = result.rows[1]
