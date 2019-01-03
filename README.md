@@ -13,17 +13,5 @@ Type 'node index.js' into your CLI to start the server.
 
 Visit 'http://localhost:3000/posts/submit' to create a post. And to view all posts, visit 'http://localhost:3000/posts'
 
-Currently the App has a bug, where if the /posts page is refreshed the server shuts down.
+The app has a huge bug, where if the /posts page is refreshed the server shuts down. This problem was resolved by removing 'client.end()', from the queries.
 I will continue working on the app.
-
-client.query('SELECT * FROM blog')
-.then(result => {
-  console.log(result.rows);
-  const template ={
-    blog: result.rows
-  }
-  res.render('posts', template);
-  client.end()
-});
-.catch(e => console.error(e.stack))
-  console.log(result.rows);
