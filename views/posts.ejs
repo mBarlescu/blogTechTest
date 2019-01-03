@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>posts</title>
+</head>
+<body>
+  <h1>this is the posts page</h1>
+  <div>
+  <% for(var i=0; i < blog.length; i++) { %>
+    <div><%= blog[i].title %></div>
+    <div><%= blog[i].description %></div>
+    <div><%= blog[i].email %></div>
+    <br />
+  <% } %>
+  </div>
+</body>
+</html>
